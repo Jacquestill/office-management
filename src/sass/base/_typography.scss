@@ -1,0 +1,46 @@
+.heading {
+  color: $color-text-primary;
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+.card {
+  padding: 1.5rem 2.5rem;
+
+  &-sub-heading {
+    color: $color-text-primary;
+    font-size: 2.4rem;
+    font-weight: 800;
+    display: inline-block;
+  }
+
+  &-text {
+    color: $color-text-primary;
+    font-size: 1.2rem;
+  }
+
+  &-expand-text {
+    color: $color-text-primary;
+    font-size: 1.2rem;
+  }
+}
+
+.office {
+  &-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &-form {
+    &-input {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+    &-text {
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+  }
+}

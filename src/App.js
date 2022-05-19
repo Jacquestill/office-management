@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import "./sass/main.scss";
+import React, { useState } from "react";
+import Heading from "./Components/_header";
+import Card from "./Components/_card";
+import AddOffice from "./Components/_addOffice";
 
 function App() {
+  const [offices, setOffices] = useState([
+    {
+      title: "Specno",
+      phone: "082 364 9864",
+      email: "info@specno.com",
+      capacity: "25",
+      address: "10 Willie Van Schoor Dr, Bo Oakdale, Cape Town, 7530",
+      border: "9",
+    },
+  ]);
+
+  function addOffice(newOffice) {
+    setOffices((prevOffices) => {
+      return [...prevOffices, newOffice];
+    });
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <Heading />
+        {offices.map((officeItem, index) => {
+          return (
+            <Card
+              key={index}
+              title={officeItem.title}
+              phone={officeItem.phone}
+              email={officeItem.email}
+              capacity={officeItem.capacity}
+              location={officeItem.address}
+              border={officeItem.border}
+            />
+          );
+        })}
       </header>
+      <AddOffice onAdd={addOffice} />
     </div>
   );
 }

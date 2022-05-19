@@ -1,0 +1,21 @@
+.u-margin-bottom-big {
+  margin-bottom: 5rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 3rem;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 0.75rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  .circle-picker {
+    justify-content: space-evenly;
+  }
+}
